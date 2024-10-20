@@ -12,13 +12,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+INFINITY_BUILD_TYPE := OFFICIAL
+INFINITY_MAINTAINER := MiDoNaSR
+TARGET_SUPPORTS_BLUR := true
+WITH_GAPPS := true
+TARGET_BUILD_GOOGLE_TELEPHONY := true
 PRODUCT_BRAND := Redmi
 PRODUCT_DEVICE := sweet2
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := 2209116AG
-PRODUCT_NAME := lineage_sweet2
+PRODUCT_NAME := infinity_sweet2
 PRODUCT_SYSTEM_DEVICE := sweet
 PRODUCT_SYSTEM_NAME := sweet_global2
 
